@@ -10,7 +10,11 @@ import UIKit
 
 class InnerViewController: UIViewController {
     @IBOutlet weak var innerViewHeightConstraint: NSLayoutConstraint!
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("That one view did load!!")
+    }
+    
     var isCollapsed = false {
         didSet {
             let factor:CGFloat = isCollapsed ? 1.5 : 0.66
@@ -25,5 +29,7 @@ class InnerViewController: UIViewController {
     @IBAction func pokeTapped(_ sender: UIButton) {
         isCollapsed = !isCollapsed
     }
-
+    deinit {
+        print("Inner Deinit")
+    }
 }

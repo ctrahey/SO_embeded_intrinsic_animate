@@ -13,6 +13,7 @@
 		FC29C12A1E68CCF10077EDC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC29C1291E68CCF10077EDC7 /* Assets.xcassets */; };
 		FC29C12D1E68CCF10077EDC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC29C12B1E68CCF10077EDC7 /* LaunchScreen.storyboard */; };
 		FC29C1351E68D1C80077EDC7 /* InnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C1341E68D1C80077EDC7 /* InnerViewController.swift */; };
+		FC29C1371E69EC200077EDC7 /* ReplaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C1361E69EC200077EDC7 /* ReplaceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FC29C12C1E68CCF10077EDC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC29C12E1E68CCF10077EDC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC29C1341E68D1C80077EDC7 /* InnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnerViewController.swift; sourceTree = "<group>"; };
+		FC29C1361E69EC200077EDC7 /* ReplaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FC29C12B1E68CCF10077EDC7 /* LaunchScreen.storyboard */,
 				FC29C12E1E68CCF10077EDC7 /* Info.plist */,
 				FC29C1341E68D1C80077EDC7 /* InnerViewController.swift */,
+				FC29C1361E69EC200077EDC7 /* ReplaceViewController.swift */,
 			);
 			path = "constraint animation";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC29C1351E68D1C80077EDC7 /* InnerViewController.swift in Sources */,
+				FC29C1371E69EC200077EDC7 /* ReplaceViewController.swift in Sources */,
 				FC29C1251E68CCF10077EDC7 /* ViewController.swift in Sources */,
 				FC29C1231E68CCF10077EDC7 /* AppDelegate.swift in Sources */,
 			);

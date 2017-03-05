@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zVr-fy-wKG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Jank-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="constraint_animation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Jank" id="BYZ-38-t0r" customClass="ViewController" customModule="constraint_animation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,7 +23,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="JTJ-E8-Aa2" userLabel="Containment View">
-                                <rect key="frame" x="67" y="60" width="240" height="128"/>
+                                <rect key="frame" x="67" y="104" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="translatesAutoresizingMaskIntoConstraints" value="NO"/>
                                 </userDefinedRuntimeAttributes>
@@ -32,7 +33,7 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uyz-LJ-yJx" userLabel="Other View">
-                                <rect key="frame" x="24" y="196" width="327" height="451"/>
+                                <rect key="frame" x="24" y="240" width="327" height="407"/>
                                 <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
@@ -43,22 +44,34 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Uyz-LJ-yJx" secondAttribute="trailing" constant="8" id="8kN-HT-3VF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JTJ-E8-Aa2" secondAttribute="trailing" constant="52" id="AZv-yZ-pLw"/>
                             <constraint firstItem="Uyz-LJ-yJx" firstAttribute="top" secondItem="JTJ-E8-Aa2" secondAttribute="bottom" constant="8" id="Eb7-Lf-rME"/>
-                            <constraint firstItem="JTJ-E8-Aa2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="GOS-CC-gJg"/>
+                            <constraint firstItem="JTJ-E8-Aa2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="dSW-UC-FYk"/>
                             <constraint firstItem="JTJ-E8-Aa2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="pcG-W0-sy3"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="kzb-gg-LdT">
+                        <barButtonItem key="leftBarButtonItem" title="see &quot;Replace&quot;" id="ZGo-H6-TDW">
+                            <connections>
+                                <segue destination="oRx-XB-OMq" kind="show" id="NWd-Wz-UHf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="See The Goal" id="Afg-lf-c8R">
+                            <connections>
+                                <segue destination="qei-Yh-lJ4" kind="show" id="4rB-lZ-HrU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="innerViewHeightConstraint" destination="5pn-DJ-viC" id="Iz4-OS-MiK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="156.97151424287858"/>
+            <point key="canvasLocation" x="1079.2" y="156.97151424287858"/>
         </scene>
         <!--Inner View Controller-->
         <scene sceneID="08O-5T-i9R">
             <objects>
-                <viewController id="jXs-Gd-Xjh" customClass="InnerViewController" customModule="constraint_animation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InnerViewController" id="jXs-Gd-Xjh" customClass="InnerViewController" customModule="constraint_animation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QTo-fL-zoK"/>
                         <viewControllerLayoutGuide type="bottom" id="fPP-ZS-PQv"/>
@@ -98,9 +111,12 @@
                                     <constraint firstAttribute="bottom" secondItem="YBs-Dq-28R" secondAttribute="bottom" priority="250" constant="8" id="iti-QU-jJq"/>
                                     <constraint firstItem="YBs-Dq-28R" firstAttribute="top" secondItem="Kz7-mh-QyJ" secondAttribute="top" constant="8" id="uOG-YR-4A0"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="translatesAutoresizingMaskIntoConstraints" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Kz7-mh-QyJ" firstAttribute="top" secondItem="S2G-os-PP6" secondAttribute="topMargin" id="00R-gm-wNF"/>
                             <constraint firstAttribute="bottom" secondItem="Kz7-mh-QyJ" secondAttribute="bottom" id="Qbj-jE-RPV"/>
@@ -117,7 +133,133 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeJ-y8-kri" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="-13"/>
+            <point key="canvasLocation" x="1968" y="-16"/>
+        </scene>
+        <!--Replacement Test-->
+        <scene sceneID="8bh-dP-CWZ">
+            <objects>
+                <viewController title="Replacement Test" id="oRx-XB-OMq" customClass="ReplaceViewController" customModule="constraint_animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5mL-MB-bGb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xVv-0N-Was"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="obv-mN-VIg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J48-g6-0W8" userLabel="Other View">
+                                <rect key="frame" x="24" y="240" width="327" height="407"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="-1" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="WgM-1K-D0b" userLabel="Placeholder" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="67" y="104" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J48-g6-0W8" firstAttribute="top" secondItem="WgM-1K-D0b" secondAttribute="bottom" constant="8" id="2Zi-y6-Ejm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WgM-1K-D0b" secondAttribute="trailing" constant="52" id="2gG-7e-KbM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J48-g6-0W8" secondAttribute="trailing" constant="8" id="8ZW-6N-p2g"/>
+                            <constraint firstItem="WgM-1K-D0b" firstAttribute="top" secondItem="5mL-MB-bGb" secondAttribute="bottom" constant="40" id="BAe-96-ESD"/>
+                            <constraint firstItem="xVv-0N-Was" firstAttribute="top" secondItem="J48-g6-0W8" secondAttribute="bottom" constant="20" id="fna-uA-WJH"/>
+                            <constraint firstItem="J48-g6-0W8" firstAttribute="leading" secondItem="obv-mN-VIg" secondAttribute="leadingMargin" constant="8" id="uxr-oq-l1k"/>
+                            <constraint firstItem="WgM-1K-D0b" firstAttribute="leading" secondItem="obv-mN-VIg" secondAttribute="leadingMargin" constant="51" id="y28-HL-jNO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="placeholderView" destination="WgM-1K-D0b" id="fW8-Qo-Tfw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJL-a4-0bA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2609" y="-501"/>
+        </scene>
+        <!--The Goal-->
+        <scene sceneID="ep8-7A-0bt">
+            <objects>
+                <viewController title="The Goal" id="qei-Yh-lJ4" customClass="InnerViewController" customModule="constraint_animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xvz-It-rO1"/>
+                        <viewControllerLayoutGuide type="bottom" id="gu6-EY-fhb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C0h-Sa-CaN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVU-QO-9dw" userLabel="Other View">
+                                <rect key="frame" x="24" y="208" width="327" height="439"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Sb-84-wDq" userLabel="Outer View">
+                                <rect key="frame" x="67" y="72" width="240" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhJ-iP-siC" userLabel="Inner View">
+                                        <rect key="frame" x="97" y="8" width="46" height="112"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oB-eI-IgY">
+                                                <rect key="frame" x="6" y="41" width="34" height="30"/>
+                                                <state key="normal" title="Poke">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pokeTapped:" destination="qei-Yh-lJ4" eventType="touchUpInside" id="NNF-Pn-EcA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="8oB-eI-IgY" firstAttribute="centerY" secondItem="uhJ-iP-siC" secondAttribute="centerY" id="68Z-5E-WEw"/>
+                                            <constraint firstAttribute="width" constant="46" id="Ey5-b1-gTb"/>
+                                            <constraint firstItem="8oB-eI-IgY" firstAttribute="centerX" secondItem="uhJ-iP-siC" secondAttribute="centerX" id="Z4d-uS-vJK"/>
+                                            <constraint firstAttribute="height" constant="112" id="yuf-zm-a8a"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="uhJ-iP-siC" firstAttribute="centerX" secondItem="3Sb-84-wDq" secondAttribute="centerX" id="7X8-16-I4E"/>
+                                    <constraint firstAttribute="bottom" secondItem="uhJ-iP-siC" secondAttribute="bottom" priority="250" constant="8" id="QK2-on-x2L"/>
+                                    <constraint firstItem="uhJ-iP-siC" firstAttribute="top" secondItem="3Sb-84-wDq" secondAttribute="top" constant="8" id="T3D-VT-CBA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cVU-QO-9dw" firstAttribute="leading" secondItem="C0h-Sa-CaN" secondAttribute="leadingMargin" constant="8" id="8hG-Sc-4P7"/>
+                            <constraint firstItem="cVU-QO-9dw" firstAttribute="top" secondItem="3Sb-84-wDq" secondAttribute="bottom" constant="8" id="E03-rs-pgH"/>
+                            <constraint firstItem="3Sb-84-wDq" firstAttribute="top" secondItem="xvz-It-rO1" secondAttribute="bottom" constant="8" id="aB1-Jg-ukM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cVU-QO-9dw" secondAttribute="trailing" constant="8" id="arv-xb-BcW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Sb-84-wDq" secondAttribute="trailing" constant="52" id="byM-td-O1I"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="cVU-QO-9dw" secondAttribute="bottom" constant="20" id="mQB-P8-yZ4"/>
+                            <constraint firstItem="3Sb-84-wDq" firstAttribute="leading" secondItem="C0h-Sa-CaN" secondAttribute="leadingMargin" constant="51" id="vDL-kg-YfN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="innerViewHeightConstraint" destination="yuf-zm-a8a" id="nT1-ut-1mH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fYN-uV-giR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2608.8000000000002" y="156.97151424287858"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yVS-kS-FNG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zVr-fy-wKG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cRz-d0-FnT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="JZi-3p-Wdi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emb-U1-7cj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="156.97151424287858"/>
         </scene>
     </scenes>
 </document>
