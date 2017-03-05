@@ -58,7 +58,6 @@ extension UIView {
 }
 
 class ReplaceViewController: UIViewController {
-    
     @IBOutlet weak var placeholderView: UIView!
     var hasSwapped = false;
     override func viewWillLayoutSubviews() {
@@ -66,25 +65,10 @@ class ReplaceViewController: UIViewController {
         guard false == hasSwapped else {
             return
         }
-//        view.translatesAutoresizingMaskIntoConstraints = false;
         let swapInVC = self.storyboard!.instantiateViewController(withIdentifier: "InnerViewController")
         self.addChildViewController(swapInVC)
         placeholderView.replaceWith(swapInVC.view)
         swapInVC.didMove(toParentViewController: self)
         hasSwapped = true
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//        return
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

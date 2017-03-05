@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "constraint animation/InnerViewController.swift"
-            timestampString = "510350286.598732"
+            timestampString = "510435396.69158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "pokeTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>

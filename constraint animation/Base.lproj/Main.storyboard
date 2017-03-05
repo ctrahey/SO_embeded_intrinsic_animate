@@ -49,12 +49,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kzb-gg-LdT">
-                        <barButtonItem key="leftBarButtonItem" title="see &quot;Replace&quot;" id="ZGo-H6-TDW">
+                        <barButtonItem key="leftBarButtonItem" title="see &quot;Replace Test&quot;" id="ZGo-H6-TDW">
                             <connections>
                                 <segue destination="oRx-XB-OMq" kind="show" id="NWd-Wz-UHf"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="See The Goal" id="Afg-lf-c8R">
+                        <barButtonItem key="rightBarButtonItem" title="see The Goal" id="Afg-lf-c8R">
                             <connections>
                                 <segue destination="qei-Yh-lJ4" kind="show" id="4rB-lZ-HrU"/>
                             </connections>
@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079.2" y="156.97151424287858"/>
+            <point key="canvasLocation" x="1098" y="-144"/>
         </scene>
         <!--Inner View Controller-->
         <scene sceneID="08O-5T-i9R">
@@ -133,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeJ-y8-kri" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1968" y="-16"/>
+            <point key="canvasLocation" x="1901" y="-171"/>
         </scene>
         <!--Replacement Test-->
         <scene sceneID="8bh-dP-CWZ">
@@ -173,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJL-a4-0bA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2609" y="-501"/>
+            <point key="canvasLocation" x="1506" y="669"/>
         </scene>
         <!--The Goal-->
         <scene sceneID="ep8-7A-0bt">
@@ -241,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYN-uV-giR" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2608.8000000000002" y="156.97151424287858"/>
+            <point key="canvasLocation" x="737" y="669"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yVS-kS-FNG">
@@ -259,7 +259,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emb-U1-7cj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="156.97151424287858"/>
+            <point key="canvasLocation" x="172" y="-144"/>
         </scene>
     </scenes>
 </document>
